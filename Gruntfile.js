@@ -1,0 +1,21 @@
+module.exports=function(grunt){
+    grunt.initConfig({
+        sass:{
+            build:{
+                files:[{
+                    'dest/home.css':'styles/home.scss',
+                    'dest/login.css':'styles/login.scss'
+                }]
+            }
+        },
+        concat:{
+            sass:{
+                src:'dest/*.css',
+                dest:'dest/all.css'
+            }
+        }
+    });
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.registerTask('default',['concat','sass']);
+};
