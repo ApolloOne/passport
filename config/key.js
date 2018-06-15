@@ -1,0 +1,9 @@
+module.exports={
+    Google:{
+        ClientID:'136838638776-561e0vf3kd0qkqkgo2qshgriaut7cmp2.apps.googleusercontent.com',
+        ClientSecret:'TpIxCexLxq-D5b2C0-btiRa4'
+    },
+    MongoDB:{
+        dbURL:'mongodb://ApolloOne:1c0nch02c0nch0@ds261040.mlab.com:61040/passport'
+    }
+}
