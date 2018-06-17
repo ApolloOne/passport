@@ -5,5 +5,8 @@ module.exports={
     },
     MongoDB:{
         dbURL:'mongodb://ApolloOne:1c0nch02c0nch0@ds261040.mlab.com:61040/passport'
+    },
+    Session:{
+        cookieKey:'ApolloOne'
     }
 }

@@ -2,8 +2,14 @@ const passport =require('passport');
 const GoogleStrategy=require('passport-google-oauth20').Strategy;
 const keys=require('./key');
 const user=require('../model/user-model');
-passport.serializeUser((user,done) => {
 
+passport.serializeUser((user,done) => {
+    done(null,user.id);
+});
+passport.deserializeUser((id,done) => {
+    user.findById(id).then((user) => {
+        done(null,user);
+    });
 });
 passport.use(
     new GoogleStrategy({
